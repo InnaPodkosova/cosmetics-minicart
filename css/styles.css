@@ -170,12 +170,10 @@ main {
 
 .popup-body {
     width: 100%;
-    height: 70vh;
-    padding-bottom: 150px;
+    height: calc(100vh - 280px);
     padding-right: 25px;
-    overflow-y: scroll;
+    overflow-y:auto;
     scrollbar-width: none;
-
 }
 
 .popup-header-level {
@@ -601,7 +599,8 @@ main {
 }
 
 .popup-footer {
-    position: absolute;
+    /*position: absolute;*/
+    position: sticky;
     width: 90%;
     bottom: 0;
     background-color: #fff;
@@ -701,37 +700,18 @@ main {
     font-family: sans-serif;
 }
 
-@media (max-width: 360px) {
-    .popup-body {
-        height: 55vh;
-    }
-}
-
-@media (min-width: 361px) {
-    .popup-body {
-        height: 65vh;
-    }
-}
-
 @media (min-width: 767px) {
     .wrap-cart-btn {
         max-width: 30vw;
     }
-}
-
-
-@media (orientation: landscape) {
-    .popup-body {
-        height: 40vh;
+    .popup-body{
+    height: calc(100vh - 220px);
     }
 }
 
-@media (min-width: 997px) {
-
-    @media (orientation: landscape) {
-        .popup-body {
-            height: 50vh;
-        }
+@media (min-width: 370px) {
+    .popup-body {
+        height: calc(100vh - 260px);
     }
 }
 
@@ -740,7 +720,6 @@ main {
     .popup-body {
         width: 106%;
         padding-right: 15px;
-        height: 70vh;
         padding-bottom: 0;
         overflow-y: scroll;
         box-sizing: border-box;
