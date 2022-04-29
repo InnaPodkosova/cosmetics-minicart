@@ -1,14 +1,14 @@
 const product =
     [
         {
-            "img": `../img/rectangle.png`,
+            "img": "img/rectangle.png",
             "headline": "B-TIGHT booty Mask",
             "currency": "$",
             "startingPrice": 99,
             "newPrice": null
         },
         {
-            "img": `../img/rectangle2.png`,
+            "img": "img/rectangle2.png",
             "headline": "Body Reshaping Collection",
             "currency": "$",
             "startingPrice": 129,
@@ -21,7 +21,7 @@ const productUpdate =
         {
             "bestDeal" : 1,
             "category": "BEST VALUE",
-            "img": `../img/product1.png`,
+            "img": "img/product1.png",
             "headline": "2 X B-TIGHT ",
             "info" : "Add another jar of our B-TIGHT Booty Mask and save! ",
             "currency": "$",
@@ -34,7 +34,7 @@ const productUpdate =
         {
             "bestDeal" : 0,
             "category": null,
-            "img": `../img/product2.png`,
+            "img": "img/product2.png",
             "headline": "GET-PEACHY",
             "info" : "Booty Scrub",
             "currency": "$",
@@ -47,7 +47,7 @@ const productUpdate =
         {
             "bestDeal" : 0,
             "category": null,
-            "img": `../img/product3.png`,
+            "img": "img/product3.png",
             "headline": "GET-PEACHY",
             "info" : "Booty Scrub",
             "currency": "$",
@@ -70,11 +70,11 @@ function inCart(data) {
                 <div class="card-product-quantity">
                  <div class="quantity_inner">        
                    <button class="btn btn_minus">
-                      <img src="../img/minus.svg" alt="minus">
+                      <img src="img/minus.svg" alt="minus">
                    </button>
                    <input type="text" class="quantity" value="1" data-max-count="20">
                    <button class="btn btn_plus">
-                     <img src="../img/plus.svg" alt="plus">
+                     <img src="img/plus.svg" alt="plus">
                    </button>
                  </div>
                  <div class="cart-price">
@@ -108,7 +108,7 @@ function cartProductUpdate(data) {
     document.getElementById("cart-product-update").innerHTML = data.map((e, key) =>
         `<div class="cart-update-wrap ${e.bestDeal === 1 ? "cart-update-best" : "card-update-simple"}" id="cart-update-${key}">
           <div class="card-bestDeal ${e.bestDeal === 0 && "none-bestDeal"}">
-                 <img src="../img/sale.svg" alt="${e.category}">
+                 <img src="img/sale.svg" alt="${e.category}">
                  <p>${e.category}</p>
           </div>
            <div class="card-update-content">
@@ -134,7 +134,7 @@ function cartProductUpdate(data) {
                  <div class="card-update-content-headline">
                    <h4>${e.headline}</h4>
                    <a class="additional-information ${e.information === 0 && "none"}">
-                     <img src="../img/info.png" alt="info">
+                     <img src="img/info.png" alt="info">
                    </a>
                  </div>
                
